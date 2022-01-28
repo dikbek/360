@@ -32,7 +32,6 @@ setTimeout(() => {
  */
 
 const loadingBarElement = document.getElementById('loading')
-console.log(loadingBarElement)
 
 const loadingManager = new THREE.LoadingManager(
     
@@ -58,7 +57,6 @@ const loadingManager = new THREE.LoadingManager(
         //console.log(progressRatio)
     }
 )
-const gltfLoader = new GLTFLoader(loadingManager)
 const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
 
 
@@ -66,8 +64,6 @@ const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
 /**
  * Base
  */
-// Debug
-const debugObject = {}
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -100,25 +96,6 @@ const overlayMaterial = new THREE.ShaderMaterial( {
 })
 const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
 scene.add(overlay)
-
-
-/**
- * Update all materials
- */
-const updateAllMaterials = () =>
-{
-    scene.traverse((child) =>
-    {
-        if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial)
-        {
-            // child.material.envMap = environmentMap
-            child.material.envMapIntensity = debugObject.envMapIntensity
-            child.material.needsUpdate = true
-            child.castShadow = true
-            child.receiveShadow = true
-        }
-    })
-}
 
 /**
  * Environment maps
@@ -186,6 +163,15 @@ const eMapUnterbacherSee = cubeTextureLoader.load([
     '/assets/images/environmentMaps/unterbacherSee/nz.png'
 ])
 
+const eMapBasel = cubeTextureLoader.load([
+    '/assets/images/environmentMaps/basel/px.png',
+    '/assets/images/environmentMaps/basel/nx.png',
+    '/assets/images/environmentMaps/basel/py.png',
+    '/assets/images/environmentMaps/basel/ny.png',
+    '/assets/images/environmentMaps/basel/pz.png',
+    '/assets/images/environmentMaps/basel/nz.png'
+])
+
 eMapNorthcliffHill.encoding = THREE.sRGBEncoding
 eMapRobberg.encoding = THREE.sRGBEncoding
 eMapAugrabies.encoding = THREE.sRGBEncoding
@@ -193,25 +179,11 @@ eMapLinksfield.encoding = THREE.sRGBEncoding
 eMapMatjies.encoding = THREE.sRGBEncoding
 eMapNSeven.encoding = THREE.sRGBEncoding
 eMapUnterbacherSee.encoding = THREE.sRGBEncoding
-
+eMapBasel.encoding = THREE.sRGBEncoding
 
 scene.background = eMapRobberg
-//scene.environment = eMapNorthcliffHill
-
-
-debugObject.envMapIntensity = 10
-
-
-
-//Gltf
-
-const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('/assets/draco/') // draco file copied  from node modules to /static
-
-gltfLoader.setDRACOLoader(dracoLoader)
 
 const fontLoader = new FontLoader(loadingManager)
-
 
 //Sphere
 
@@ -221,7 +193,7 @@ const sphere = new THREE.Mesh(geoSpehere, matSphere)
 scene.add(sphere)
 
 
-        //TEXT
+//TEXT
 
 
 const menuGroup = new THREE.Group()
@@ -229,13 +201,8 @@ const menuGroup = new THREE.Group()
 // menuGroup.rotation.y = - Math.PI / 6
 scene.add(menuGroup)
 
-//Button functions
 
-
-
-//TEXT
-
-//Material
+//Text Material
 
 const textMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending} );
 const textMaterialRollover = new THREE.MeshBasicMaterial( { color: 0x00ffff, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending} );
@@ -249,70 +216,19 @@ const nSevenText = new THREE.Mesh()
 const unterbacherSeeText = new THREE.Mesh()
 const matjiesText = new THREE.Mesh()
 const linksfieldText = new THREE.Mesh()
+const baselText = new THREE.Mesh()
 
-scene.add(robbergText, northcliffHillText, augrabiesText, nSevenText, unterbacherSeeText, matjiesText, linksfieldText)
+scene.add(
+    robbergText,         
+    northcliffHillText, 
+    augrabiesText, 
+    nSevenText, 
+    unterbacherSeeText, 
+    matjiesText, 
+    linksfieldText, 
+    baselText)
 
 let textGeometry
-
-// function Robberg()    
-//     {fontLoader.load(
-//         '/assets/fonts/JetBrainsMono/JetBrainsMonoExtraBold_Regular.json',
-//         (font) =>
-//         {
-//             const textGeometry = new TextGeometry(
-//                 `Robberg`,
-//                 {
-//                     font: font,
-//                     size: 0.175,
-//                     height: 0.01,
-//                     curveSegments: 3,
-//                     bevelEnabled: false,
-//                     bevelThickness: 0.05,
-//                     bevelSize: 0.1,
-//                     bevelOffset: - 0.05,
-//                     bevelSegments: 1
-//                 }
-//             )
-
-//             textGeometry.center()
-//             textGeometry.computeBoundingBox()
-            
-//             robbergText.geometry = textGeometry
-//             robbergText.material = textMaterial
-//             const textRotate = new THREE.Group()
-//             textRotate.add(robbergText)
-//             robbergText.position.z = 5
-//             textRotate.rotation.y = Math.PI  / 36
-//             menuGroup.add(textRotate)
-//             robbergText.rotation.y = Math.PI
-            
-//         //     //Domevents
-
-//         //     domEvents.addEventListener(
-//         //     robbergText, 
-//         //   'click', 
-//         //   function () {
-//         //     scene.background = eMapRobberg
-//         //     matSphere.envMap = eMapRobberg
-//         //     },
-//         //   false )
-          
-//         //   domEvents.addEventListener(
-//         //     robbergText, 
-//         //   'touch', 
-//         //   function () {
-//         //     scene.background = eMapRobberg
-//         //     matSphere.envMap = eMapRobberg
-//         //     },
-//         //   false )
-            
-
-
-//             })
-//         }
-// Robberg()
-
-
 
 if (scene.background === eMapNorthcliffHill)
                 {northcliffHillText.material == textMaterialCurrent}
@@ -573,6 +489,42 @@ fontLoader.load(
         }
     )      
 
+//Basel
+fontLoader.load(
+        '/assets/fonts/JetBrainsMono/JetBrainsMonoExtraBold_Regular.json',
+        (font) =>
+        {
+            textGeometry = new TextGeometry(
+                `Basel`,
+                {
+                    font: font,
+                    size: 0.25,
+                    height: 0.01,
+                    curveSegments: 3,
+                    bevelEnabled: false,
+                    bevelThickness: 0.05,
+                    bevelSize: 0.1,
+                    bevelOffset: - 0.05,
+                    bevelSegments: 1
+                }
+            )
+
+            textGeometry.center()
+            textGeometry.computeBoundingBox()
+
+            baselText.geometry = textGeometry
+
+            const textRotate = new THREE.Group()
+            textRotate.add(baselText)
+            baselText.position.z = 5
+            textRotate.rotation.y = 0
+            menuGroup.add(textRotate)
+            baselText.rotation.y = Math.PI
+            
+            
+        }
+    )   
+
 /**
  * Lights
  */
@@ -690,26 +642,17 @@ function unterbacherSeeApply()
             matSphere.envMap = eMapUnterbacherSee
         }
 
+function baselApply() 
+        {
+            scene.background = eMapBasel
+            matSphere.envMap = eMapBasel
+        }
 
-//Event listener
+//Event listener to apply each map
 
 window.addEventListener('click', () =>
 {
-    // switch(currentIntersect)
-    // {
-    //     case currentIntersect.object === northcliffHillText:
-    //     northcliffHillApply()
-    //     case currentIntersect.object === robbergText:
-    //     robbergApply()
-    //     case currentIntersect.object === augrabiesText:
-    //     augrabiesApply()
-    //     case currentIntersect.object === nSevenText:
-    //     nSevenApply()
-    //     case currentIntersect.object === linksfieldText:
-    //     linksfieldApply()
-    //     default:
-    //     matjiesApply()
-    // }
+
 
     if(currentIntersect)
     {
@@ -741,50 +684,27 @@ window.addEventListener('click', () =>
         {
             unterbacherSeeApply()
         }
+        else if(currentIntersect.object === baselText)
+        {
+            baselApply()
+        }
        
     }
 })
 
-const objectsToTest = [robbergText, northcliffHillText, augrabiesText, nSevenText, unterbacherSeeText, matjiesText, linksfieldText]
+//menu items to cast
 
-
-
-// //Dom events
-
-// var domEvents = new THREEx.DomEvents(camera, renderer.domElement);
-
-// //three interactive
-
-// const interactionManager = new InteractionManager(
-//   renderer,
-//   camera,
-//   renderer.domElement
-// )
-
-
-// interactionManager.add(northcliffHillText)
-
-// northcliffHillText.addEventListener
-//         (
-//         "touchend", 
-//         (event) => 
-//         {
-//             event.target.mesh.material.color.set(0xff0000)
-//             scene.background = eMapNorthcliffHill
-//             matSphere.envMap = eMapNorthcliffHill
-//         }
-//         )
-
-// northcliffHillText.addEventListener
-//         (
-//         "click", 
-//         (event) => 
-//         {
-//             event.target.material.color.set(0xff0000)
-//             scene.background = eMapNorthcliffHill
-//             matSphere.envMap = eMapNorthcliffHill
-//         }
-//         )
+const objectsToTest = 
+        [
+            robbergText, 
+            northcliffHillText, 
+            augrabiesText, 
+            nSevenText, 
+            unterbacherSeeText, 
+            matjiesText, 
+            linksfieldText, 
+            baselText
+        ]
 
 // Controls
 const controls = new OrbitControls(camera, renderer.domElement )
@@ -800,8 +720,6 @@ controls.maxPolarAngle =  Math.PI / 1.25
 // controls.maxAzimuthAngle = Math.PI / 3
 /**
 
-
-
 /**
  * Animate
  */
@@ -815,15 +733,10 @@ const tick = () =>
 {
 
     //Raycaster
-// //Cast a ray
+    
+    //Cast a ray
 
 raycaster.setFromCamera(mouse, camera)
-
-// const rayOrigin = new THREE.Vector3(-3, 0, 0)
-// const rayDirection = new THREE.Vector3(1, 0, 0)
-// rayDirection.normalize()
-
-// raycaster.set(rayOrigin, rayDirection)
 
 const intersects = raycaster.intersectObjects(objectsToTest)
 
