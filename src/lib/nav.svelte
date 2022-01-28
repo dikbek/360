@@ -18,7 +18,7 @@
 
   <div class="wrapper">
     <div class="logo" href="/">
-      <a href="http://www.illustrative.dev"  target="_blank" class="letter let1">360&deg;</a>   
+      <a href="https://github.com/dikbek/360"  target="_blank" class="letter let1">360&deg;</a>   
     </div>
   </div>
    
