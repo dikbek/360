@@ -1,66 +1,27 @@
 <script>
   //js imports
-  import { Link, Router, navigate } from "svelte-navigator";
+  import { Link, Router, navigate } from "svelte-navigator"
   //stores
-  import { Routes } from "../stores/routes";
+  import { Routes } from "../stores/routes"
 
-  import { fade, scale, slide } from "svelte/transition";
-  import { cubicInOut, elasticOut } from "svelte/easing";
+  import { fade, scale, slide } from "svelte/transition"
+  import { cubicInOut, elasticOut } from "svelte/easing"
 
   //     //button
 
-  let visible = false;
+
 
 
 
 </script>
 
-{#if visible}
-  <div
-    class="wrapper"
-    transition:slide={{ duration: 750, delay: 100, easing: cubicInOut }}
-  >
-    <div class="logo" href="/">
-      <a href="/" class="letter let1">THREEJS</a>
-      <a href="/" class="letter dev">SHOWCASE</a>
-   
-    </div>
 
-    <div class="nav">
-      <Router primary={false}>
-        {#each Routes as route}
-          <a on:click={
-            () => 
-            {
-              navigate(route.routeUrl), 
-              visible=false
-            } 
-            } 
-            href={route.routeUrl}
-            >
-            <Link to={route.routeUrl}>
-              {route.routeName}
-            </Link><br />
-          </a>
-        {/each}
-      </Router>
-      <div class="icons-container">
-        <a href="mailto:hallo@richardbecker-illustration.de"><div class ="icon mail" ></div></a>
-        <a href="https://github.com/dikbek"><div class ="icon git"></div></a>
-        <a href="https://instagram.com/crude1y"><div class ="icon insta"></div></a>
-        <a href="https://www.linkedin.com/in/rbillustrator/"><div class ="icon linkedin"></div></a>
-      </div>
+  <div class="wrapper">
+    <div class="logo" href="/">
+      <a href="http://www.illustrative.dev"  target="_blank" class="letter let1">360&deg;</a>   
     </div>
   </div>
- 
-  
-{/if}
-<div class="toggle-wrapper">
-  <label>
-    <input type="checkbox" class="toggle" id="menu" bind:checked={visible} />
-    }
-  </label>
-</div>
+   
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
@@ -70,15 +31,6 @@
   }
 
   
-  .toggle-wrapper {
-    align-items: center;
-    align-self: center;
-    height: max-content;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 2em;
-    grid-template-rows: max-content;
-  }
 
   .icons-container {
     display: flex;
@@ -143,16 +95,14 @@
 
   .wrapper {
     
-    background: #ffffff10;
     align-items: center;
     align-self: center;
     height: max-content;
-    padding: 1em;
     display: grid;
-    grid-template-columns: 10em 1fr;
-    grid-template-rows: max-content max-content max-content;
+    grid-template-columns: 5em 1fr;
+    grid-template-rows: max-content;
     transition: height 1s;
-    z-index: 100;
+    z-index: 1;
   }
 
   .nav {
@@ -217,7 +167,6 @@
   .wrapper :global(a) {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.9em;
   }
   .nav :global(a:hover) {
     color:#d2e907;
@@ -241,15 +190,13 @@
     font-family: 'carlmarx', monospace;
     font-weight: 700;
     display: flex;
-    height: max-content;
+    margin: 10px;
     /* font-weight: 800; */
-    font-size: 1.85em;
+    font-size: 2em;
     cursor: pointer;
-    grid-column: 1/2;
-    transform: rotate(-4deg);
     text-decoration: none;
     transform-origin: center;
-    margin-bottom: 10px;
+    transform: rotateZ(-45deg)
   }
 
   .letter {
@@ -258,7 +205,7 @@
   }
   .letter:hover {
     color: #d2e907;
-    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
   }
 
 .dev {

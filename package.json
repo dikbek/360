@@ -25,6 +25,7 @@
     "gsap": "^3.8.0",
     "svelte-canvas": "^0.7.0",
     "three": "^0.133.0",
+    "three.interactive": "^1.1.0",
     "threex-domevents": "^1.0.0",
     "threex.domevents": "^1.0.1"
   },
