@@ -11,23 +11,13 @@
     "@types/three": "^0.132.2",
     "svelte": "^3.43.1",
     "svelte-navigator": "^3.1.5",
-    "vite": "^2.6.2",
-    "vite-plugin-glsl": "^0.0.4",
-    "vite-plugin-string": "^1.0.1"
+    "vite": "^2.6.2"
   },
   "dependencies": {
-    "@here/harp.gl": "^0.27.1",
-    "@types/dat.gui": "^0.7.7",
-    "@types/greensock": "^1.15.32",
-    "@types/threex.domevents": "git+https://github.com/ahilbig/types-threex.domevents.git",
     "check-node-version": "^4.1.0",
-    "dat.gui": "^0.7.7",
-    "gsap": "^3.8.0",
+    "gsap": "^3.9.1",
     "svelte-canvas": "^0.7.0",
-    "three": "^0.133.0",
-    "three.interactive": "^1.1.0",
-    "threex-domevents": "^1.0.0",
-    "threex.domevents": "^1.0.1"
+    "three": "^0.137.4"
   },
   "start": "sirv public -single"
 }

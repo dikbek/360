@@ -6,7 +6,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
-import { mapLinear } from 'three/src/math/MathUtils'
 import gsap from 'gsap'
 import { 
   sineInOut, 
@@ -19,11 +18,6 @@ import {
   quartInOut, 
   quintInOut 
 } from 'svelte/easing';
-import * as DomEvents from "threex-domevents";
-  var THREEx = {};
-  DomEvents(THREE, THREEx);
-
-import { InteractionManager } from "three.interactive"
 
 
 
