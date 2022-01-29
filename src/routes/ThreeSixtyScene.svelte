@@ -156,7 +156,7 @@ const eMapNSeven = cubeTextureLoader.load([
 
 const eMapUnterbacherSee = cubeTextureLoader.load([
     '/assets/images/environmentMaps/unterbacherSee/px.png',
-    '/assets/images/environmentMaps/unterbacherSee/nx.png',
+    '/assets/images/environmentMaps/unterbacherSee/nx.jpg',
     '/assets/images/environmentMaps/unterbacherSee/py.png',
     '/assets/images/environmentMaps/unterbacherSee/ny.png',
     '/assets/images/environmentMaps/unterbacherSee/pz.png',
@@ -793,4 +793,6 @@ tick()
 
 <canvas class="webgl"></canvas>
 <div id="loading"class="loading-bar"></div>
+<div class="content-wrap">
+    Photographs and 3D web design by Richard Becker</div>
 
