@@ -90,3 +90,63 @@ a
     top: 10vh;
   
 }
+
+.content-wrap
+{   
+    height: max-content;
+    font-size: 0.6em;
+    width: 100vW;
+    position: fixed;
+    bottom: 10px;
+    align-items: center;
+    margin: 0 auto 20 auto;
+    z-index: 0;
+    
+    
+} 
+
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: max-content;
+    width: 20px;
+    margin: 10px;
+    
+
+
+  }
+
+.icon {
+    margin-top: 10px;
+    height: 1.5em;
+    width: 1.5rem;
+    cursor: pointer;
+  }
+
+  .mail {
+    background-image: url(/assets/images/icons/mail.svg);
+
+  }
+  .git {
+    background-image: url(/assets/images/icons/github.svg);
+
+  }
+  .insta {
+    background-image: url(/assets/images/icons/instagram.svg);
+
+  }
+  .linkedin {
+    background-image: url(/assets/images/icons/linkedin.svg);
+
+  }
+
+  .site {
+    background-image: url(/assets/images/icons/rb.svg);
+
+  }
+
+  .icon:hover {
+    filter: invert(25%) saturate(28789%) hue-rotate(250deg) ;
+  }
