@@ -101,75 +101,76 @@ scene.add(overlay)
  * Environment maps
  */
 const eMapNorthcliffHill = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/northcliffHill/px.png',
-    '/assets/images/environmentMaps/northcliffHill/nx.png',
-    '/assets/images/environmentMaps/northcliffHill/py.png',
-    '/assets/images/environmentMaps/northcliffHill/ny.png',
-    '/assets/images/environmentMaps/northcliffHill/pz.png',
-    '/assets/images/environmentMaps/northcliffHill/nz.png'
+    '/assets/images/environmentMaps/northcliffHill/px.jpg',
+    '/assets/images/environmentMaps/northcliffHill/nx.jpg',
+    '/assets/images/environmentMaps/northcliffHill/py.jpg',
+    '/assets/images/environmentMaps/northcliffHill/ny.jpg',
+    '/assets/images/environmentMaps/northcliffHill/pz.jpg',
+    '/assets/images/environmentMaps/northcliffHill/nz.jpg'
 ])
 
 const eMapRobberg = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/robberg/px.png',
-    '/assets/images/environmentMaps/robberg/nx.png',
-    '/assets/images/environmentMaps/robberg/py.png',
-    '/assets/images/environmentMaps/robberg/ny.png',
-    '/assets/images/environmentMaps/robberg/pz.png',
-    '/assets/images/environmentMaps/robberg/nz.png'
+    '/assets/images/environmentMaps/robberg/px.jpg',
+    '/assets/images/environmentMaps/robberg/nx.jpg',
+    '/assets/images/environmentMaps/robberg/py.jpg',
+    '/assets/images/environmentMaps/robberg/ny.jpg',
+    '/assets/images/environmentMaps/robberg/pz.jpg',
+    '/assets/images/environmentMaps/robberg/nz.jpg'
 ])
 
 const eMapMatjies = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/matjies/px.png',
-    '/assets/images/environmentMaps/matjies/nx.png',
-    '/assets/images/environmentMaps/matjies/py.png',
-    '/assets/images/environmentMaps/matjies/ny.png',
-    '/assets/images/environmentMaps/matjies/pz.png',
-    '/assets/images/environmentMaps/matjies/nz.png'
+    '/assets/images/environmentMaps/matjies/px.jpg',
+    '/assets/images/environmentMaps/matjies/nx.jpg',
+    '/assets/images/environmentMaps/matjies/py.jpg',
+    '/assets/images/environmentMaps/matjies/ny.jpg',
+    '/assets/images/environmentMaps/matjies/pz.jpg',
+    '/assets/images/environmentMaps/matjies/nz.jpg'
 ])
 
 const eMapLinksfield = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/linksfield/px.png',
-    '/assets/images/environmentMaps/linksfield/nx.png',
-    '/assets/images/environmentMaps/linksfield/py.png',
-    '/assets/images/environmentMaps/linksfield/ny.png',
-    '/assets/images/environmentMaps/linksfield/pz.png',
-    '/assets/images/environmentMaps/linksfield/nz.png'
+    '/assets/images/environmentMaps/linksfield/px.jpg',
+    '/assets/images/environmentMaps/linksfield/nx.jpg',
+    '/assets/images/environmentMaps/linksfield/py.jpg',
+    '/assets/images/environmentMaps/linksfield/ny.jpg',
+    '/assets/images/environmentMaps/linksfield/pz.jpg',
+    '/assets/images/environmentMaps/linksfield/nz.jpg'
 ])
 
 const eMapAugrabies = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/augrabies/px.png',
-    '/assets/images/environmentMaps/augrabies/nx.png',
-    '/assets/images/environmentMaps/augrabies/py.png',
-    '/assets/images/environmentMaps/augrabies/ny.png',
-    '/assets/images/environmentMaps/augrabies/pz.png',
-    '/assets/images/environmentMaps/augrabies/nz.png'
+    '/assets/images/environmentMaps/augrabies/px.jpg',
+    '/assets/images/environmentMaps/augrabies/nx.jpg',
+    '/assets/images/environmentMaps/augrabies/py.jpg',
+    '/assets/images/environmentMaps/augrabies/ny.jpg',
+    '/assets/images/environmentMaps/augrabies/pz.jpg',
+    '/assets/images/environmentMaps/augrabies/nz.jpg'
 ])
 
 const eMapNSeven = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/nSeven/px.png',
-    '/assets/images/environmentMaps/nSeven/nx.png',
-    '/assets/images/environmentMaps/nSeven/py.png',
-    '/assets/images/environmentMaps/nSeven/ny.png',
-    '/assets/images/environmentMaps/nSeven/pz.png',
-    '/assets/images/environmentMaps/nSeven/nz.png'
+    '/assets/images/environmentMaps/nSeven/px.jpg',
+    '/assets/images/environmentMaps/nSeven/nx.jpg',
+    '/assets/images/environmentMaps/nSeven/py.jpg',
+    '/assets/images/environmentMaps/nSeven/ny.jpg',
+    '/assets/images/environmentMaps/nSeven/pz.jpg',
+    '/assets/images/environmentMaps/nSeven/nz.jpg'
 ])
 
 const eMapUnterbacherSee = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/unterbacherSee/px.png',
+    '/assets/images/environmentMaps/unterbacherSee/px.jpg',
     '/assets/images/environmentMaps/unterbacherSee/nx.jpg',
-    '/assets/images/environmentMaps/unterbacherSee/py.png',
-    '/assets/images/environmentMaps/unterbacherSee/ny.png',
-    '/assets/images/environmentMaps/unterbacherSee/pz.png',
-    '/assets/images/environmentMaps/unterbacherSee/nz.png'
+    '/assets/images/environmentMaps/unterbacherSee/py.jpg',
+    '/assets/images/environmentMaps/unterbacherSee/ny.jpg',
+    '/assets/images/environmentMaps/unterbacherSee/pz.jpg',
+    '/assets/images/environmentMaps/unterbacherSee/nz.jpg'
 ])
 
 const eMapBasel = cubeTextureLoader.load([
-    '/assets/images/environmentMaps/basel/px.png',
-    '/assets/images/environmentMaps/basel/nx.png',
-    '/assets/images/environmentMaps/basel/py.png',
-    '/assets/images/environmentMaps/basel/ny.png',
-    '/assets/images/environmentMaps/basel/pz.png',
-    '/assets/images/environmentMaps/basel/nz.png'
+    '/assets/images/environmentMaps/basel/px.jpg',
+    '/assets/images/environmentMaps/basel/nx.jpg',
+    '/assets/images/environmentMaps/basel/py.jpg',
+    '/assets/images/environmentMaps/basel/ny.jpg',
+    '/assets/images/environmentMaps/basel/pz.jpg',
+    '/assets/images/environmentMaps/basel/nz.jpg'
+
 ])
 
 eMapNorthcliffHill.encoding = THREE.sRGBEncoding
