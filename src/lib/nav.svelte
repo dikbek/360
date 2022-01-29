@@ -20,6 +20,11 @@
     <div class="logo" href="/">
       <a href="https://github.com/dikbek/360"  target="_blank" class="letter let1">360&deg;</a>   
     </div>
+    <div class="icons-container">
+      <a href="https://github.com/dikbek"><div class ="icon git"></div></a>
+      <a href="https://instagram.com/crude1y"><div class ="icon insta"></div></a>
+      <a href="https://www.richardbecker-illustration.de"><div class ="icon site"></div></a>
+    </div>
   </div>
    
 
