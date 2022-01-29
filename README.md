@@ -6,4 +6,4 @@ Upload your HDRIs to https://matheowis.github.io/HDRI-to-CubeMap/ to create cube
 
 Replace mine with yours, tweak the text, voila.
 
-Still figuring out how to chage the text colour for current image.
+Still figuring out how to change the text colour for current image. Noob!
